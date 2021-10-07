@@ -11,11 +11,11 @@ class BytesBox extends React.Component {
         <>
          <p>{this.props.bytesName}</p>
          <input 
-            type="text" 
+            type="number" 
             value={this.props.bytesValue} 
             onChange={(event) => {
                 this.props.changeBytes(
-                    event.target.value, this.props.bytesName
+                    parseFloat(event.target.value), this.props.bytesName
                     );
                 }}
             />
